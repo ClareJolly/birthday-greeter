@@ -13,11 +13,14 @@ Ask the user for their name and birthday
 ```
 Wish the user a happy birthday or tell them how long until their next birthday
 ```
-<!-- ## Proposed screens:
+
+## Proposed screens:
 
 Here are some suggested screens, but feel free to change the content, style and flow to make it your own.
 
 
-<img alt="Birthday first page" src="../images/birthday_app_1.png" width="400px" style="display: block;" />
-<img alt="Birthday greet" src="../images/birthday_app_3.png" width="400px" style="display: block;" />
-<img alt="Birthday counter" src="../images/birthday_app_2.png" width="400px" style="display: block;" /> -->
+![Entry screen](images/birthday_app_1.png)
+
+![Entry screen](images/birthday_app_2.png)
+
+![Entry screen](images/birthday_app_3.png)

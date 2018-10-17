@@ -1,0 +1,13 @@
+<%
+# p Date.strptime(Date.today.strftime("%d/%m/%Y"), "%d/%m/%Y")
+#
+# p @birthday
+if Date.strptime(Date.today.strftime("%d/%m/%Y"), "%d/%m/%Y") == @birthday%>
+Happy birthday, <%=@name%>!
+<%else
+# p @birthday
+# date = Date.parse @birthday
+# @birthday.year = Date.today.year
+# p @birthday%>
+It's 1 day until your birthday
+<%end%>

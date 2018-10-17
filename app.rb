@@ -6,8 +6,13 @@ class Birthday < Sinatra::Base
   end
 
   post '/greeter' do
-    'Name: Clare, Birthday: 30/09/1978'
-    # erb :greet
+    @name = params[:name]
+    @birthday = params[:birthday]
+    # p @birthday
+    @birthday = Date.strptime(@birthday, "%d/%m/%Y")
+    # Date.strptime('25/04/14', '%d/%m/%y')
+    # p @birthday
+    erb :greet
   end
 
   # start the server if ruby file executed directly
