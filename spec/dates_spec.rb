@@ -1,10 +1,7 @@
 require 'datechecker'
 
 describe DateChecker do
-  # subject(:datechecker) { DateChecker.new(Date.strptime("10/10/2018", "%d/%m/%Y")) }
   subject(:datechecker) { DateChecker.new("10/10/2018") }
-  # let(:player_1) { double :player }
-  # let(:player_2) { double :player }
 
   describe 'format birthday' do
     it 'takes day and month and returns birthday' do
@@ -46,9 +43,5 @@ describe DateChecker do
       datechecker.format_birthday("12", "10")
       expect(datechecker.next_birthday).to eq Date.strptime("12/10/2018", "%d/%m/%Y")
     end
-
   end
-  # it "passes for equal dates" do
-  #   expect(Time.new(2014, 4, 2)).to be_the_same_time_as Time.new(2014, 4, 2)
-  # end
 end

@@ -1,7 +1,7 @@
 <% require 'Date'
 
 months = Date::MONTHNAMES.reject {|m| m.nil?}
-# p months%>
+%>
 <h1>Hello there</h1>
 <form action="/greeter" method="post">
   <label for="name">
@@ -19,7 +19,6 @@ months = Date::MONTHNAMES.reject {|m| m.nil?}
       <option selected "">Please select a month</option>
       <% months.each_with_index { |m, i| %><option value="<%=('%02d' % (i+1))%>"><%=m%></option><% }%>
     </select>
-    <!-- <%=Date::MONTHNAMES%> -->
   </label></p>
   <p>
   <input type="submit" value="Go">

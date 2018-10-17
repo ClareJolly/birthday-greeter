@@ -1,12 +1,4 @@
-<%
-# p "xxx"
-# p  @datecheck.birthday
-# p  @datecheck.today
-# p @datecheck.next_birthday
-# p @datecheck.date_diff
-# p @datecheck.birthday_today?
-# p "yyy"
-if @datecheck.birthday_today? %>
+<%if @datecheck.birthday_today? %>
 Happy birthday, <%=@name%>!
 <%else%>
 It's <%=@datecheck.date_diff%> day<%=@datecheck.plural%> until your birthday

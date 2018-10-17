@@ -1,6 +1,3 @@
-
-  # @today = Date.strptime((Date.today.strftime("%d/%m/%Y").to_s), "%d/%m/%Y")
-# p Date.today+1
 feature 'Enter user details' do
   scenario 'submitting name and birthday - return birthday' do
     visit('/')

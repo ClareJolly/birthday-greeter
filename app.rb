@@ -3,8 +3,6 @@ require './lib/datechecker'
 
 class Birthday < Sinatra::Base
 
-  enable :sessions
-
   get '/' do
     erb :index
   end
@@ -15,14 +13,8 @@ class Birthday < Sinatra::Base
     month = params[:month]
     @datecheck = DateChecker.new
     @datecheck.format_birthday(day, month)
-    # p @datecheck.date_diff
-    # p "dsaas"
-
-    # @birthday = "#{ @month}/#{@month}/#{Date.today.year}"
-    # @birthday = Date.strptime(@birthday, "%d/%m/%Y")
     erb :greet
   end
 
-  # start the server if ruby file executed directly
   run! if app_file == $0
 end
