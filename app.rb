@@ -1,17 +1,25 @@
 require 'sinatra/base'
+require './lib/datechecker'
 
 class Birthday < Sinatra::Base
+
+  enable :sessions
+
   get '/' do
     erb :index
   end
 
   post '/greeter' do
     @name = params[:name]
-    @birthday = params[:birthday]
-    # p @birthday
-    @birthday = Date.strptime(@birthday, "%d/%m/%Y")
-    # Date.strptime('25/04/14', '%d/%m/%y')
-    # p @birthday
+    day = params[:day]
+    month = params[:month]
+    @datecheck = DateChecker.new
+    @datecheck.format_birthday(day, month)
+    # p @datecheck.date_diff
+    # p "dsaas"
+
+    # @birthday = "#{ @month}/#{@month}/#{Date.today.year}"
+    # @birthday = Date.strptime(@birthday, "%d/%m/%Y")
     erb :greet
   end
 

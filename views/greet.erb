@@ -1,13 +1,13 @@
 <%
-# p Date.strptime(Date.today.strftime("%d/%m/%Y"), "%d/%m/%Y")
-#
-# p @birthday
-if Date.strptime(Date.today.strftime("%d/%m/%Y"), "%d/%m/%Y") == @birthday%>
+# p "xxx"
+# p  @datecheck.birthday
+# p  @datecheck.today
+# p @datecheck.next_birthday
+# p @datecheck.date_diff
+# p @datecheck.birthday_today?
+# p "yyy"
+if @datecheck.birthday_today? %>
 Happy birthday, <%=@name%>!
-<%else
-# p @birthday
-# date = Date.parse @birthday
-# @birthday.year = Date.today.year
-# p @birthday%>
-It's 1 day until your birthday
+<%else%>
+It's <%=@datecheck.date_diff%> day<%=@datecheck.plural%> until your birthday
 <%end%>
