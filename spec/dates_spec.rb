@@ -20,7 +20,7 @@ describe DateChecker do
       expect(datechecker.date_diff).to eq 1
     end
 
-    it '1 day difference (when next birthday this year)' do
+    it '1 day difference (when next birthday next year)' do
       datechecker.format_birthday("01", "10")
       datechecker.next_birthday
       expect(datechecker.date_diff).to eq 356
